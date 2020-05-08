@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<form lang="zh">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>注册</title>
+        
+        <style>
+        input:focus,textarea:focus{
+            background-color:yellow;
+        }
+        button:disabled,input:disabled{
+            color: #555555;
+        }
+        input:checked+span{
+            color: red;
+        }
+        textarea::selection{
+            color:white;
+            background-color: blue;
+        }
+        </style>
+
+
+
+    </head>
+    <body>
+        <form>
+            <fieldset style="width: 600px;">
+            <legend>用户注册</legend>
+        姓名: <input type="text" name="userName" style="width:245px" placeholder="输入姓名"/>
+            <br />
+            <br />
+        密码: <input type="password" name="userPsd" style="width:100px" maxlength="11" placeholder="输入密码"/>
+        <br />
+        <br />
+        学历：<input type="radio" name="1" checked="checked"/><span>初中及以下</span>
+        <input type="radio" name="1"/><span>高中</span>
+        <input type="radio" name="1"/><span>大学及以上</span>
+        <br />
+        <br />
+        籍贯：<select id="select1" runat="server">
+            <option>广东</option>
+            <option>四川</option>
+            <option>重庆</option>
+        </select>
+        <br />
+        <br />
+        兴趣爱好：<input type="checkbox" name="read" value="1" checked="true"><span>阅读</span>
+        <input type="checkbox" name="art" value="2"><span>艺术</span>
+        <input type="checkbox" name="PE" value="3"><span>体育</span>
+        <input type="checkbox" name="music" value="4"><span>音乐</span>
+        <br />
+        <br />
+        其他：<textarea style="vertical-align: top; width: 500px; height: 300px;"></textarea>
+        <br />
+        <br />
+        <button type="submit" name="submit" value="保存" style="color: gray;">保存</button>
+        <button type="button" name="close" value="退出" onclick="interface.close();" style="color: gray;"/>退出</button>
+        <button type="reset" value="复位" style="color: gray;"/>复位</button>
+    </fieldset>
+    </form>
+    </body>
